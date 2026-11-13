@@ -29,7 +29,7 @@
   async function loadExercises() {
     try {
       loading = true;
-      const response = await fetch('http://localhost:3000/api/exercises');
+      const response = await fetch('/api/exercises');
       const data = await response.json();
 
       if (data.error) {
@@ -65,7 +65,7 @@
         : userAnswer;
 
       const response = await fetch(
-        `http://localhost:3000/api/exercises/${selectedExercise.id}/submit`,
+        `/api/exercises/${selectedExercise.id}/submit`,
         {
           method: 'POST',
           headers: {

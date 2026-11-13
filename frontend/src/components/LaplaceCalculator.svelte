@@ -54,7 +54,7 @@
       const { data: { session } } = await supabase.auth.getSession();
       const token = session?.access_token;
 
-      const res = await fetch('http://localhost:3000/api/calculator/laplace', {
+      const res = await fetch('/api/calculator/laplace', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
